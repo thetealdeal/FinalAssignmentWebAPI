@@ -12,8 +12,8 @@ using FinalAssignmentWebAPI.Data.DTOs.CharacterDTOs;
 
 namespace FinalAssignmentWebAPI.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("/")]
     public class CharactersController : ControllerBase
     {
         private readonly MoviesDbContext _context;

@@ -10,7 +10,7 @@
     },
     "mssql1": {
       "type": "mssql",
-      "connectionId": "Azure-SQL-Via-VisualStudio",
+      "connectionId": "MoviesDbContext",
       "dynamicId": null
     }
   }

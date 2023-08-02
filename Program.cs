@@ -14,7 +14,7 @@ builder.Services.AddSwaggerGen();
 
 
 builder.Services.AddDbContext<MoviesDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString"))
+    options.UseSqlServer(builder.Configuration.GetConnectionString("MoviesDbContext"))
 
 );
 

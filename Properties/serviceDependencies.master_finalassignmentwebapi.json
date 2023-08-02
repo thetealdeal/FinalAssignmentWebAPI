@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Web/sites/FinalAssignmentWebAPI/providers/Microsoft.ServiceLinker/linkers/Azure_sql_via_VisualStudio_ED05C255F3",
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/azclpr-sql-db/databases/AzClPrSqlDb",
+      "type": "mssql.azure",
+      "connectionId": "Azure_sql_via_VisualStudio",
+      "dynamicId": null
+    }
+  }
+}

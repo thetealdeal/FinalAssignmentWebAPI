@@ -52,7 +52,10 @@ builder.Services.AddSwaggerGen(options =>
 
 var app = builder.Build();
 app.UseSwagger();
-app.UseSwaggerUI();
+app.UseSwaggerUI( c=>
+{
+    c.RoutePrefix = string.Empty;
+});
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

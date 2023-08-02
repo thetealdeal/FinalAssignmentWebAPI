@@ -13,10 +13,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
-builder.Services.AddDbContext<MoviesDbContext>(
-    
-    //options =>
-    //options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString"))
+builder.Services.AddDbContext<MoviesDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString"))
 
 );
 

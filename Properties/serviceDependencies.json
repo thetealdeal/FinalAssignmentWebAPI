@@ -1,11 +1,17 @@
 {
   "dependencies": {
+    "apis1": {
+      "type": "apis"
+    },
     "secrets1": {
-      "type": "secrets"
+      "type": "secrets",
+      "connectionId": "VaultUri",
+      "dynamicId": null
     },
     "mssql1": {
       "type": "mssql",
-      "connectionId": "MoviesDbContext"
+      "connectionId": "Azure-SQL-Via-VisualStudio",
+      "dynamicId": null
     }
   }
 }

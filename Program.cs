@@ -2,8 +2,12 @@ using FinalAssignmentWebAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
+using Azure.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
+
+var keyVaultEndpoint = new Uri(Environment.GetEnvironmentVariable("VaultUri"));
+builder.Configuration.AddAzureKeyVault(keyVaultEndpoint, new DefaultAzureCredential());
 
 // Add services to the container.
 
@@ -14,9 +18,7 @@ builder.Services.AddSwaggerGen();
 
 
 builder.Services.AddDbContext<MoviesDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("MoviesDbContext"))
-
-);
+    options.UseSqlServer(builder.Configuration.GetConnectionString("MoviesDbContext")));
 
 // this is important - otherwise data won't connect
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
